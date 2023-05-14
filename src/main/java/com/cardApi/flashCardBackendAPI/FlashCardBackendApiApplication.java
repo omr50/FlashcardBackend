@@ -14,13 +14,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class FlashCardBackendApiApplication {
 
 	public static void main(String[] args) {
-		// Retrieve environment variable
-		String dbConnectionString = System.getenv("DB_CONNECTION_STRING");
-
-		// Use the retrieved value as needed in your application
-
-		// For example, you can set it as a system property
-		System.setProperty("spring.datasource.url", dbConnectionString);
 
 		SpringApplication.run(FlashCardBackendApiApplication.class, args);
 	}
