@@ -52,6 +52,7 @@ public class JwtSecurityConfig {
         // https://docs.spring.io/spring-boot/docs/current/reference/html/data.html#data.sql.h2-web-console.spring-security
         return httpSecurity
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/").permitAll()
                         .requestMatchers("/authenticate").permitAll()
                         .requestMatchers("/signup").permitAll()
 //                        .requestMatchers(PathRequest.toH2Console()).permitAll() // h2-console is a servlet and NOT recommended for a production

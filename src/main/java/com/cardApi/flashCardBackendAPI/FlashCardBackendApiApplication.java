@@ -30,7 +30,8 @@ public class FlashCardBackendApiApplication {
 		@Override
 		public void addCorsMappings(CorsRegistry registry) {
 			registry.addMapping("/**")
-					.allowedOrigins("*")
+					.allowedOrigins("http://localhost:3000", "http://quickstudy.s3-website-us-east-1.amazonaws.com")
+//					.allowedOrigins("http://quickstudy.s3-website-us-east-1.amazonaws.com")
 					.allowedMethods("*")
 					.allowedHeaders("*")
 					.allowCredentials(true)
